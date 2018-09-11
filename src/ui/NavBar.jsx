@@ -33,8 +33,8 @@ const NavBar = () => {
             <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Feiras Passadas</a>
                 <div className="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                    <Link to="/" ><a className="dropdown-item" href="#">2018</a></Link>
-                    <Link to="/" ><a className="dropdown-item" href="#">2017</a></Link>
+                    <Link to="/a2017" ><a className="dropdown-item" href="#">2017</a></Link>
+                    <Link to="/a2016" ><a className="dropdown-item" href="#">2016</a></Link>
                 </div>
             </li>
 

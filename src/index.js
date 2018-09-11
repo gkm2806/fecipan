@@ -8,6 +8,8 @@ import Votacao from './container/Votacao';
 import registerServiceWorker from './registerServiceWorker';
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 
+
+
 ReactDOM.render(
   <Router history={hashHistory}>
     <route path="/" component={App}>
