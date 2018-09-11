@@ -38,6 +38,15 @@ const NavBar = () => {
                 </div>
             </li>
 
+            <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
+                  <div className="dropdown-menu dropdown-primary" id="loginMenu" aria-labelledby="navbarDropdownMenuLink">
+                    <h1>Welcome to My Awesome App</h1>
+                    <div id="firebaseui-auth-container" className="w-25 p-3"></div>
+                    <div id="loader">Loading...</div>
+                  </div>
+            </li>
+
         </ul>
 
         <form className="form-inline">

@@ -20,3 +20,10 @@ main{
 .navbar-brand{
   color:green !important;
 }
+
+#loginMenu{
+
+  height: 5em !important;/*
+  display: flex;
+  overflow: hidden;*/
+}

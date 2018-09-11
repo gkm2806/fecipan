@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './data/firebase.js';
 import './index.css';
 import App from './App';
 import Home from './container/Home';
@@ -8,8 +9,6 @@ import Votacao from './container/Votacao';
 import Manage from './container/Manage';
 import registerServiceWorker from './registerServiceWorker';
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
-
-
 
 ReactDOM.render(
   <Router history={hashHistory}>
