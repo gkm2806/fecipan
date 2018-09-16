@@ -1,29 +1,27 @@
 import * as firebase from "firebase";
-var firebaseui = require('firebaseui');
-var config = {
+const fire = firebase.initializeApp({
   apiKey: "AIzaSyDMZRKX0p7RUSqQe6jeLvKy2BwI0REs16Y",
   authDomain: "fecipan.firebaseapp.com",
   databaseURL: "https://fecipan.firebaseio.com",
   projectId: "fecipan",
   storageBucket: "fecipan.appspot.com",
   messagingSenderId: "135044982024"
-};
-firebase.initializeApp(config);
-console.log(firebase);
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
+});
+const firebaseui = require('firebaseui');
+
+const ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 ui.start('#firebaseui-auth-container', {
   signInOptions: [
     // List of OAuth providers supported.
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-    firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-    firebase.auth.GithubAuthProvider.PROVIDER_ID
   ],
   // Other config options...
 });
 
-var uiConfig = {
+
+ui.start('#firebaseui-auth-container', {
   callbacks: {
     signInSuccessWithAuthResult: function(authResult, redirectUrl) {
       // User successfully signed in.
@@ -32,8 +30,6 @@ var uiConfig = {
       return true;
     },
     uiShown: function() {
-      // The widget is rendered.
-      // Hide the loader.
       document.getElementById('loader').style.display = 'none';
     }
   },
@@ -41,19 +37,28 @@ var uiConfig = {
   signInFlow: 'popup',
   signInSuccessUrl: '<url-to-redirect-to-on-success>',
   signInOptions: [
-    // Leave the lines as is for the providers you want to offer your users.
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-    firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-    firebase.auth.GithubAuthProvider.PROVIDER_ID,
-    firebase.auth.EmailAuthProvider.PROVIDER_ID,
-    firebase.auth.PhoneAuthProvider.PROVIDER_ID
   ],
   // Terms of service url.
   tosUrl: '<your-tos-url>',
   // Privacy policy url.
   privacyPolicyUrl: '<your-privacy-policy-url>'
-};
+});
 
-// The start method will wait until the DOM is loaded.
-ui.start('#firebaseui-auth-container', uiConfig);
+const database = firebase.database();
+function writeProjeto(nome, area, nivel, local) {
+  firebase.database().ref('projetos/' + nome).set({
+    nome: nome,
+    local: local,
+    area: area,
+    nivel: nivel
+  });
+}
+
+export default fire;
+
+/*
+jorgin.on('value', function(snapshot) {
+  console.log(snapshot.val());
+});*/

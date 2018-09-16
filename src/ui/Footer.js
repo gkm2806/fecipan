@@ -8,16 +8,16 @@ const Footer = () => {
             <div className="col-md-6 mt-md-0 mt-3">
               <h5 className="text-uppercase">Instituto Federal de Educação, Ciência e Tecnologia</h5>
               <p>Obrigado por participar! </p>
-                <div class="container">
-                  <ul class="list-unstyled list-inline text-center">
-                    <li class="list-inline-item">
-                      <a class="btn-floating btn-fb mx-2">
-                        <i class="fa fa-facebook"> </i>
+                <div className="container">
+                  <ul className="list-unstyled list-inline text-center">
+                    <li className="list-inline-item">
+                      <a className="btn-floating btn-fb mx-2">
+                        <i className="fa fa-facebook"> </i>
                       </a>
                     </li>
-                    <li class="list-inline-item">
-                      <a class="btn-floating btn-tw mx-2">
-                        <i class="fa fa-twitter"> </i>
+                    <li className="list-inline-item">
+                      <a className="btn-floating btn-tw mx-2">
+                        <i className="fa fa-twitter"> </i>
                       </a>
                     </li>
                   </ul>
@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
             <hr className="clearfix w-100 d-md-none pb-3" />
             <div className="col-md-3 mb-md-0 mb-3">
-                <h5 classNameFfo="text-uppercase">Parcerias</h5>
+                <h5 className="text-uppercase">Parcerias</h5>
                 <ul className="list-unstyled">
                   <li>
                     <a href="#!">IF Campus Corumba</a>

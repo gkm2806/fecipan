@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import Card from './../ui/Card.jsx';
+import Card from './../ui/Card';
 
 export default class Sobre extends Component {
+  componentDidMount(){
+    console.log(this.props.projetos);
+  }
   render() {
     return (
       <div classNameName="Container text-center">

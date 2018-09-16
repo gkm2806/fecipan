@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './data/firebase.js';
+import './data/firebase';
 import './index.css';
 import App from './App';
 import Home from './container/Home';
@@ -16,7 +16,7 @@ ReactDOM.render(
       <IndexRoute component={Home} />
       <route path="/A2016" component={""} />
       <route path="/A2017" component={""} />
-      <route path="/votacao" component={Votacao} />
+      <route path="/votacao" component={Votacao}/>
       <route path="/sobre" component={Sobre} />
       <route path="/config" component={Manage} />
     </route>

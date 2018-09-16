@@ -8,7 +8,6 @@ const Card = (props) => {
         <p className="card-text white-text">{props.text}</p>
       </div>
     </div>
-
   );
 };
 

@@ -3,7 +3,6 @@ import React, { component } from 'react';
 const FormularioProjeto = ({submitHandler}) => {
   let _PNome, _PNivel, _PArea;
   const handleSub = (e) => {
-
     console.log("Projeto Criado");
     console.log(_PNome.value);
     console.log(_PNivel.value);
@@ -14,12 +13,12 @@ const FormularioProjeto = ({submitHandler}) => {
       area: _PArea.value});
   }
   return (
-    <form onSubmit={handleSub} class="text-center border border-light p-5">
-        <p class="h4 mb-4">Cadastro de Projetos</p>
-        <input type="text" ref={input => _PNome = input} id="defaultContactFormName" class="form-control mb-4" placeholder="Nome do Projeto"/>
+    <form onSubmit={handleSub} className="text-center border border-light p-5">
+        <p className="h4 mb-4">Cadastro de Projetos</p>
+        <input type="text" ref={input => _PNome = input} id="defaultContactFormName" className="form-control mb-4" placeholder="Nome do Projeto"/>
 
         <label>Nivel</label>
-        <select ref={input => _PNivel = input} class="browser-default custom-select mb-4">
+        <select ref={input => _PNivel = input} className="browser-default custom-select mb-4">
             <option value="" selected disabled>Escolha</option>
             <option value="E. Fundamenta">E. Fundamental</option>
             <option value="E. Médio">E. Médio</option>
@@ -27,19 +26,18 @@ const FormularioProjeto = ({submitHandler}) => {
         </select>
 
         <label>Area</label>
-        <select ref={input => _PArea = input} class="browser-default custom-select mb-4">
+        <select ref={input => _PArea = input} className="browser-default custom-select mb-4">
             <option value="" selected disabled>Escolha</option>
             <option value="Humanas" >Humanas</option>
             <option value="Exatas">Exatas</option>
             <option value="Biológicas">Biológicas</option>
         </select>
 
-        <div class="form-group">
-            <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="descrição"></textarea>
+        <div className="form-group">
+            <textarea className="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="descrição"></textarea>
         </div>
 
-        <button class="btn btn-info btn-block" type="submit">enviar</button>
-
+        <button className="btn btn-info btn-block" type="submit">enviar</button>
     </form>
   );
 };

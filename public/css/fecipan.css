@@ -4,6 +4,10 @@
   color: white;
 }
 
+#CGeral div{
+  padding: 2em, 0, 2em, 0;
+}
+
 .card-text{
   color:white;
 }
