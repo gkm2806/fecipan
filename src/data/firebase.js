@@ -46,7 +46,6 @@ ui.start('#firebaseui-auth-container', {
   privacyPolicyUrl: '<your-privacy-policy-url>'
 });
 
-const database = firebase.database();
 function writeProjeto(nome, area, nivel, local) {
   firebase.database().ref('projetos/' + nome).set({
     nome: nome,

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Card from './../ui/Card';
 
 export default class Sobre extends Component {
   componentDidMount(){

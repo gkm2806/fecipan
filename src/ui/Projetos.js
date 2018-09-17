@@ -1,5 +1,4 @@
-import React, { component } from 'react';
-
+import React from 'react';
 const Projetos = (props) => {
   return (
     <div className='p-1 m-2'style={{height:"5em",display:"flex",flexWrap:"wrap"}}>
@@ -17,8 +16,8 @@ const Projetos = (props) => {
           {props.pontos}
         </div>
       </div>
-      <div className='border border-light' className="text-center" style={{width: 30+"%",height: 100+"%", backgroundColor: "brown"}}>
-         BOTAO
+      <div className='border border-light text-center' style={{width: 30+"%",height: 100+"%"}}>
+         deletar
       </div>
     </div>
   );

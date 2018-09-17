@@ -1,4 +1,4 @@
-import React, { component } from 'react';
+import React from 'react';
 import logo from './../logo.svg';
 const Footer = () => {
   return (
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-copyright text-center py-3">
-          © 2018 Copyright: <a href="https://www.facebook.com/gkm2806" target="_blank"> @gkm2806</a>
+          © 2018 Copyright: <a href="https://www.facebook.com/gkm2806" rel="noopener noreferrer" target="_blank"> @gkm2806</a>
           <br></br>
           Powered by ReactJs <img src={logo} className="App-logo" alt="logo" style={{width: 50+"px"}}/>
 

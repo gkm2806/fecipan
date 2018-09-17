@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import Card from './../ui/Card';
 
 export default class Votacao extends Component {
   render() {
     return (
       <div className="Container text-center">
-        <table className="table table-hover">
+        <table className="table-responsive text-nowrap table-hover ">
           <thead className="green white-text">
             <tr>
               <th scope="col">Id</th>

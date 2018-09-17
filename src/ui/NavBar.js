@@ -1,14 +1,14 @@
-import React, { component } from 'react';
+import React from 'react';
 import {Link} from 'react-router';
 import IF from './../IF.svg';
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light white lighten-1 .z-depth-1-half">
-        <Link to="/" ><a className="navbar-brand">
+        <Link to="/" className="navbar-brand">
           <img src={IF} width="60" alt="" />
-        </a></Link>
-        <h4><Link to="/" ><a className="navbar-brand">FECIPAN 2018</a></Link></h4>
+        </Link>
+        <h4><Link to="/" className="navbar-brand" >FECIPAN 2018</Link></h4>
 
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
             aria-expanded="false" aria-label="Toggle navigation">
