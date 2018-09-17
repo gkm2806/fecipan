@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 export default class Votacao extends Component {
+  
   render() {
     return (
       <div className="Container text-center">

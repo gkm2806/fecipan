@@ -1,21 +1,22 @@
 import React from 'react';
 
 const FormularioProjeto = ({submitHandler}) => {
-  let _PNome, _PNivel, _PArea;
+  let _PNome, _PNivel, _PArea, _PLocal;
   const handleSub = (e) => {
     console.log("Projeto Criado");
-    console.log(_PNome.value);
-    console.log(_PNivel.value);
-    console.log(_PArea.value);
     submitHandler(e, {
       name: _PNome.value,
       nivel: _PNivel.value,
-      area: _PArea.value});
+      area: _PArea.value,
+      local: _PLocal.value}
+    );
   }
   return (
     <form onSubmit={handleSub} className="text-center border border-light p-5">
         <p className="h4 mb-4">Cadastro de Projetos</p>
         <input type="text" ref={input => _PNome = input} id="defaultContactFormName" className="form-control mb-4" placeholder="Nome do Projeto"/>
+
+        <input type="text" ref={input => _PLocal = input} id="defaultContactFormName" className="form-control mb-4" placeholder="Local"/>
 
         <label>Nivel</label>
         <select ref={input => _PNivel = input} className="browser-default custom-select mb-4">
@@ -32,10 +33,6 @@ const FormularioProjeto = ({submitHandler}) => {
             <option value="Exatas">Exatas</option>
             <option value="Biológicas">Biológicas</option>
         </select>
-
-        <div className="form-group">
-            <textarea className="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="descrição"></textarea>
-        </div>
 
         <button className="btn btn-info btn-block" type="submit">enviar</button>
     </form>

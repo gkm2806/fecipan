@@ -6,7 +6,7 @@ export default class Sobre extends Component {
   }
   render() {
     return (
-      <div classNameName="Container text-center">
+      <div className="Container text-center">
           <h1> O que é FECIPAN?</h1>
             <div className="sobreCA">
               <div id="carousel-example-1z" className="carousel slide carousel-fade" data-ride="carousel">

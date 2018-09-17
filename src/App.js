@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 import NavBar from './ui/NavBar';
 import Footer from './ui/Footer';
+import fire from './data/firebase'
 
 class App extends Component {
   constructor(props){
     super(props);
     this.state = {
+      data:{},
       user:{},
       projetos: [
         {
@@ -47,7 +49,7 @@ class App extends Component {
         },
         {
           id: 5,
-          nome: 'Desenvolvimento de uma rede de Pi-Beacons e um aplicativo móvel andrcansei de escrever',
+          nome: 'Desenvolvimento de uma rede de Pi-Beacons e um apcansei de escrever',
           pontos: 0,
           area: "info",
           local: "A2",
@@ -94,18 +96,37 @@ class App extends Component {
     }
   }
   componentDidMount(){
+    const projetos = this.state.projetos
     this.authListener();
-    console.log(this.props.projetos);
+    var t = this.state.data;
+    var vaca = fire.database().ref('/projetos/').limitToLast(100);
+    console.log(vaca);
+    fire.database().ref('/projetos/').on("child_added", snap =>{
+      projetos.push({
+        id: snap.key,
+        nome: snap.val().nome,
+        nivel: snap.val().nivel,
+        local: snap.val().local,
+        area: snap.val().area
+      })
+    })
+
 
   }
 
   authListener() {
   }
+
+  handleClick = () => {
+    console.log(this.state.projeto);
+  }
+
   render() {
     return (
       <div className="App">
         <NavBar />
         <main>
+
           {React.cloneElement(this.props.children, {projetos : this.state.projetos})}
         </main>
       <Footer />

@@ -3,17 +3,16 @@ import FormularioProjeto from './../ui/FormularioProjeto';
 import CardList from './../ui/CardList';
 import CGeral from './../ui/CGeral';
 import Status from './../ui/Status';
+import writeProjeto from './../data/database'
 
 export default class Manage extends Component {
   constructor(){
     super();
     this.handleSub = this.handleSub.bind(this);
   }
-  handleSub(e, submits){
+  handleSub(e, {name, area, nivel, local}){
     e.preventDefault();
-    console.log(submits);
-    this.props.projetos.push(submits);
-    console.log(this.props.projetos)
+    writeProjeto(name, area, nivel, local)
   }
   render() {
     return (
@@ -30,7 +29,7 @@ export default class Manage extends Component {
             <CGeral />
           </div>
           <div className="col">
-            <Status lan="on" net="on" db="fail" />
+            <Status />
           </div>
         </div>
 
