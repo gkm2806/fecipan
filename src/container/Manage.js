@@ -3,7 +3,7 @@ import FormularioProjeto from './../ui/FormularioProjeto';
 import CardList from './../ui/CardList';
 import CGeral from './../ui/CGeral';
 import Status from './../ui/Status';
-import writeProjeto from './../data/database'
+import data from './../data/database'
 
 export default class Manage extends Component {
   constructor(){
@@ -12,7 +12,7 @@ export default class Manage extends Component {
   }
   handleSub(e, {name, area, nivel, local}){
     e.preventDefault();
-    writeProjeto(name, area, nivel, local)
+    data.writeProjeto(name, area, nivel, local)
   }
   render() {
     return (

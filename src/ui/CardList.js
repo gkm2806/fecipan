@@ -8,7 +8,7 @@ export default class CardList extends Component {
         <p className="h4 mb-4">Lista de Projetos</p>
           {this.props.projetos.map((projeto, index) =>{
             return(
-              <Projetos local={projeto.local} nome={projeto.nome} nivel={projeto.nivel} pontos={projeto.nota} />
+              <Projetos local={projeto.local} nome={projeto.nome} nivel={projeto.nivel} pontos={projeto.pontos} />
             );
           })};
       </div>

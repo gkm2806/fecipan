@@ -16,8 +16,8 @@ const Projetos = (props) => {
           {props.pontos}
         </div>
       </div>
-      <div className='border border-light text-center' style={{fontSize:"1vw", width: 30+"%",height: 100+"%"}}>
-         <p className="align-baseline">deletar</p>
+      <div className='border border-light text-center' style={{fontSize:"1vw", width: 30+"%",height: 100+"%",padding: 0}}>
+         <button type="button" className="btn btn-danger" style={{width: 100+"%",height: 100+"%",margin: 0}} ></button>
       </div>
     </div>
   );
