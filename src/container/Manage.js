@@ -12,7 +12,7 @@ export default class Manage extends Component {
   }
   handleSub(e, {name, area, nivel, local}){
     e.preventDefault();
-    data.writeProjeto(name, area, nivel, local)
+    data.writeProjeto(name, area, nivel, local);
   }
   render() {
     return (
@@ -23,7 +23,7 @@ export default class Manage extends Component {
             <FormularioProjeto submitHandler={this.handleSub}/>
           </div>
           <div className="col">
-            <CardList projetos = {this.props.projetos} />
+            <CardList projetos = {this.props.projetos } />
           </div>
           <div className="col">
             <CGeral />

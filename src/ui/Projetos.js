@@ -1,5 +1,12 @@
 import React from 'react';
 const Projetos = (props) => {
+  const upHandler = (e) => {
+    var x = this;
+    console.log("Projeto Atualizado");
+    handleUp(e, {
+      name: this.props.nome
+    });
+  }
   return (
     <div className='p-1 m-2'style={{height:"5em",display:"flex",flexWrap:"wrap"}}>
       <div  style={{width: 70+"%",height: 100+"%",display:"flex",flexWrap:"wrap"}}>
@@ -17,7 +24,7 @@ const Projetos = (props) => {
         </div>
       </div>
       <div className='border border-light text-center' style={{fontSize:"1vw", width: 30+"%",height: 100+"%",padding: 0}}>
-         <button type="button" className="btn btn-danger" style={{width: 100+"%",height: 100+"%",margin: 0}} ></button>
+         <button onClick={} type="button" className="btn btn-danger" style={{width: 100+"%",height: 100+"%",margin: 0}} ></button>
       </div>
     </div>
   );

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 export default class Votacao extends Component {
-  
+
   render() {
     return (
       <div className="Container text-center">
-        <table className="table-responsive text-nowrap table-hover ">
+        <table className="table-responsive text-nowrap table-hover table-bordered">
           <thead className="green white-text">
             <tr>
               <th scope="col">Id</th>
